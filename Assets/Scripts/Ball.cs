@@ -17,11 +17,21 @@ public class Ball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetMouseButtonDown(0)) // 0 for left mouse btn
+        {
+            LaunchBall();
+        }
         
     }
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("The " + gameObject.name + " has collided with " + collision.gameObject.name);
+    }
+
+    void LaunchBall()
+    {
+        GetComponent<Rigidbody2D>().velocity = new Vector2(0, InitialBallVelocity); //this should launch it
     }
 
 
