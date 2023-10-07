@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
+    public float InitialBallVelocity = 5.0f;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,5 +23,6 @@ public class Ball : MonoBehaviour
     {
         Debug.Log("The " + gameObject.name + " has collided with " + collision.gameObject.name);
     }
+
 
 }
