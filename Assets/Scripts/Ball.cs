@@ -6,12 +6,14 @@ public class Ball : MonoBehaviour
 {
     public float InitialBallVelocity = 5.0f;
 
+    private Rigidbody2D ballRB;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        ballRB = GetComponent<Rigidbody2D>(); //cache it for use 
     }
 
     // Update is called once per frame
@@ -31,7 +33,7 @@ public class Ball : MonoBehaviour
 
     void LaunchBall()
     {
-        GetComponent<Rigidbody2D>().velocity = new Vector2(0, InitialBallVelocity); //this should launch it
+        ballRB.velocity = new Vector2(0, InitialBallVelocity);
     }
 
 
