@@ -300,9 +300,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Paddle
       objectReference: {fileID: 0}
+    - target: {fileID: 4098812841681185953, guid: 0dca129647954d8428908d8a67df231b, type: 3}
+      propertyPath: paddleMaxX
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 4107761268287245474, guid: 0dca129647954d8428908d8a67df231b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.22
+      value: 8.21
       objectReference: {fileID: 0}
     - target: {fileID: 4107761268287245474, guid: 0dca129647954d8428908d8a67df231b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -524,17 +528,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2671133273752847982, guid: 4c7bd27641382644cb66549ff60cf8f2, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 6fa70f3ff1e963b458ac74dc081c0201, type: 2}
+    - target: {fileID: 4342091553888891923, guid: 4c7bd27641382644cb66549ff60cf8f2, type: 3}
+      propertyPath: InitialBallVelocity
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8489010538755536900, guid: 4c7bd27641382644cb66549ff60cf8f2, type: 3}
       propertyPath: m_Name
       value: Ball
       objectReference: {fileID: 0}
     - target: {fileID: 8693869458253433306, guid: 4c7bd27641382644cb66549ff60cf8f2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.13745
+      value: 8.19
       objectReference: {fileID: 0}
     - target: {fileID: 8693869458253433306, guid: 4c7bd27641382644cb66549ff60cf8f2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.735295
+      value: 4.46
       objectReference: {fileID: 0}
     - target: {fileID: 8693869458253433306, guid: 4c7bd27641382644cb66549ff60cf8f2, type: 3}
       propertyPath: m_LocalPosition.z
