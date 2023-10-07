@@ -302,7 +302,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4098812841681185953, guid: 0dca129647954d8428908d8a67df231b, type: 3}
       propertyPath: paddleMaxX
-      value: 16
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4107761268287245474, guid: 0dca129647954d8428908d8a67df231b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4107761268287245474, guid: 0dca129647954d8428908d8a67df231b, type: 3}
       propertyPath: m_LocalPosition.x
