@@ -21,6 +21,7 @@ public class Block : MonoBehaviour
     {
         // Play the sound at the block's position
         AudioSource.PlayClipAtPoint(hitSound, transform.position);
+        Debug.Log("I was hit by: " + collision.gameObject.name);
 
         // Destroy the block
         Destroy(gameObject);
