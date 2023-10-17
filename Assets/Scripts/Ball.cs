@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    public float InitialBallVelocity = 5.0f;
+    public float InitialBallVelocity = 15.0f;
     public bool isStarted = false;
     private GameObject paddle;
     private Vector2 ballPaddleDelta;
@@ -18,11 +18,14 @@ public class Ball : MonoBehaviour
     void Start()
     {
         ballRB = GetComponent<Rigidbody2D>();
-        Paddle paddleComponent = FindObjectOfType<Paddle>();
-        paddle = paddleComponent.gameObject;
-        paddle = FindObjectOfType<Paddle>();
-        ballPaddleDelta = transform.position - paddle.transform.position;
 
+        Paddle paddleComponent = FindObjectOfType<Paddle>();
+        if (paddleComponent != null) 
+        {
+            paddle = paddleComponent.gameObject; 
+        }
+
+        ballPaddleDelta = transform.position - paddle.transform.position;
     }
 
     // Update is called once per frame
@@ -43,6 +46,7 @@ public class Ball : MonoBehaviour
     void LaunchBall()
     {
         ballRB.velocity = new Vector2(0, InitialBallVelocity);
+        Debug.Log("LaunchBall called");
     }
 
     void CheckForStart()

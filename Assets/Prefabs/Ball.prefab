@@ -161,4 +161,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f6bc50b0cd75b64483119c4c19d4e69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitialBallVelocity: 5
+  InitialBallVelocity: 50
+  isStarted: 0

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Block : MonoBehaviour
 {
+    public AudioClip hitSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +19,12 @@ public class Block : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("I was hit by: "+ collision.gameObject.name);
+        // Play the sound at the block's position
+        AudioSource.PlayClipAtPoint(hitSound, transform.position);
+
+        // Destroy the block
+        Destroy(gameObject);
     }
+
 
 }
