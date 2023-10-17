@@ -536,6 +536,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Play Space
       objectReference: {fileID: 0}
+    - target: {fileID: 1710834304908339627, guid: fa4bc6a1ef881ad41825b24edf0993a9, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681129272625385349, guid: fa4bc6a1ef881ad41825b24edf0993a9, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 3447670715848202033, guid: fa4bc6a1ef881ad41825b24edf0993a9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -576,6 +584,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7194661867243949070, guid: fa4bc6a1ef881ad41825b24edf0993a9, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -595,7 +607,7 @@ PrefabInstance:
       objectReference: {fileID: 6200000, guid: 6fa70f3ff1e963b458ac74dc081c0201, type: 2}
     - target: {fileID: 4342091553888891923, guid: 4c7bd27641382644cb66549ff60cf8f2, type: 3}
       propertyPath: InitialBallVelocity
-      value: 5
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8489010538755536900, guid: 4c7bd27641382644cb66549ff60cf8f2, type: 3}
       propertyPath: m_Name

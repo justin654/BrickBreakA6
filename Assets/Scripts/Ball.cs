@@ -8,6 +8,9 @@ public class Ball : MonoBehaviour
     public bool isStarted = false;
     private GameObject paddle;
     private Vector2 ballPaddleDelta;
+    public AudioClip wallHitSound;
+    public AudioClip paddleHitSound;
+
 
 
     private Rigidbody2D ballRB;
@@ -40,8 +43,16 @@ public class Ball : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("The " + gameObject.name + " has collided with " + collision.gameObject.name);
+        if (collision.gameObject.tag == "Paddle")
+        {
+            AudioSource.PlayClipAtPoint(paddleHitSound, transform.position);
+        }
+        else if (collision.gameObject.tag == "Wall")
+        {
+            AudioSource.PlayClipAtPoint(wallHitSound, transform.position);
+        }
     }
+
 
     void LaunchBall()
     {
