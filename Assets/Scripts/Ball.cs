@@ -10,6 +10,8 @@ public class Ball : MonoBehaviour
     private Vector2 ballPaddleDelta;
     public AudioClip wallHitSound;
     public AudioClip paddleHitSound;
+    private AudioSource audioSource;
+
 
 
 
@@ -20,6 +22,7 @@ public class Ball : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         ballRB = GetComponent<Rigidbody2D>();
 
         Paddle paddleComponent = FindObjectOfType<Paddle>();
@@ -45,11 +48,11 @@ public class Ball : MonoBehaviour
     {
         if (collision.gameObject.tag == "Paddle")
         {
-            AudioSource.PlayClipAtPoint(paddleHitSound, transform.position);
+            audioSource.PlayOneShot(paddleHitSound);
         }
         else if (collision.gameObject.tag == "Wall")
         {
-            AudioSource.PlayClipAtPoint(wallHitSound, transform.position);
+            audioSource.PlayOneShot(wallHitSound);
         }
     }
 
