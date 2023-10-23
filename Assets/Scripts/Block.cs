@@ -4,26 +4,25 @@ using UnityEngine;
 
 public class Block : MonoBehaviour
 {
+    private AudioSource audioSource;
     public AudioClip hitSound;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
+    // Update is called once per framee
     void Update()
     {
         
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        // Play the sound at the block's position
-        AudioSource.PlayClipAtPoint(hitSound, transform.position);
+        audioSource.PlayOneShot(hitSound);
         Debug.Log("I was hit by: " + collision.gameObject.name);
 
-        // Destroy the block
         Destroy(gameObject);
     }
 

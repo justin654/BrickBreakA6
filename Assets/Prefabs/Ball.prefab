@@ -97,7 +97,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 8489010538755536900}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 6fa70f3ff1e963b458ac74dc081c0201, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -148,7 +148,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!114 &4342091553888891923
 MonoBehaviour:
@@ -162,8 +162,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f6bc50b0cd75b64483119c4c19d4e69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitialBallVelocity: 50
+  InitialBallVelocity: 20
   isStarted: 0
+  blockHitSound: {fileID: 8300000, guid: 577edcd8f51b40541b2d2a22e2ba5100, type: 3}
   wallHitSound: {fileID: 8300000, guid: f8f81ec288448b546bf3d732271d7aee, type: 3}
   paddleHitSound: {fileID: 8300000, guid: 3ff361d471489a741ac3becb3752759d, type: 3}
 --- !u!82 &8057362176852987164

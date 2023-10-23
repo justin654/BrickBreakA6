@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    public float InitialBallVelocity = 15.0f;
+    public float InitialBallVelocity = 20.0f;
     public bool isStarted = false;
     private GameObject paddle;
     private Vector2 ballPaddleDelta;
