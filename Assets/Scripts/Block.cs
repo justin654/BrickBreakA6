@@ -9,30 +9,34 @@ public class Block : MonoBehaviour
     public int points = 100;
     private GameSession gameSession;
     private int timesHit;
+    private int hitsRemaining;
 
     [Header("Block Properties")]
-    [SerializeField] private int blockHitsToDestroy = 1; // by default, a block is destroyed by one hit
+    [SerializeField] private int blockHitsToDestroy = 1;
     [SerializeField] private bool unbreakable = false;
+
 
     // Start is called before the first frame update
     void Start()
     {
         timesHit = 0;
+        hitsRemaining = blockHitsToDestroy;
 
         audioSource = GetComponent<AudioSource>();
 
         gameSession = FindObjectOfType<GameSession>();
         if (gameSession != null)
         {
-            gameSession.RegisterBlock(!unbreakable); // here we pass whether the block is breakable
+            gameSession.RegisterBlock(!unbreakable);
         }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (unbreakable) return; // If block is unbreakable, ignore the collision/hit
+        if (unbreakable) return;
 
-        timesHit++; // Increase hit counter
+        timesHit++;
+        hitsRemaining--;
 
         if (timesHit >= blockHitsToDestroy)
         {
