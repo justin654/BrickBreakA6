@@ -22,8 +22,9 @@ public class Block : MonoBehaviour
     {
         audioSource.PlayOneShot(hitSound);
         Debug.Log("I was hit by: " + collision.gameObject.name);
-
-        Destroy(gameObject);
+        GetComponent<Renderer>().enabled = false;
+        GetComponent<Collider2D>().enabled = false;
+        Destroy(gameObject, hitSound.length);
     }
 
 
