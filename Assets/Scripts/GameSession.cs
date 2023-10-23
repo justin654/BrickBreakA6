@@ -76,12 +76,16 @@ public class GameSession : MonoBehaviour
         breakableBlocks = 0;
     }
 
-    public void RegisterBlock()
+    public void RegisterBlock(bool isBreakable)
     {
-        breakableBlocks++;
-        Debug.Log("CountBlocks called by " + gameObject.name + ". Current count: " + breakableBlocks);
-
+        // Only increment the count for breakable blocks
+        if (isBreakable)
+        {
+            breakableBlocks++;
+            Debug.Log("RegisterBlock called. Current breakable blocks: " + breakableBlocks);
+        }
     }
+
 
     public void BlockDestroyed(int points)
     {
