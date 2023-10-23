@@ -10,7 +10,6 @@ public class SceneLoader : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -21,16 +20,21 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadStartScene()
     {
-        SceneManager.LoadScene("StartMenu"); 
+        SceneManager.LoadScene("StartMenu");
     }
 
     public void LoadWinScene()
     {
-        SceneManager.LoadScene("Win"); 
+        SceneManager.LoadScene("Win");
     }
     public void LoadGameOverScene()
     {
         StartCoroutine(PlaySoundThenLoadScene(gameOverSound, "GameOver"));
+    }
+
+    public void LoadLevel2()
+    {
+        SceneManager.LoadScene("Level02");
     }
 
     public void QuitGame()

@@ -4,20 +4,33 @@ using UnityEngine;
 
 public class Floor : MonoBehaviour
 {
-    private SceneLoader sceneLoader;
+    private GameSession gameSession;
 
     private void Start()
     {
-        sceneLoader = FindObjectOfType<SceneLoader>();
+        gameSession = FindObjectOfType<GameSession>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Ball"))
         {
-            Debug.Log("You hit the floor and lost, transition to gameover");
-            sceneLoader.LoadGameOverScene();
+            Debug.Log("You hit the floor and lost, transition to gameover and reset all vars");
+
+            if (gameSession != null)
+            {
+                gameSession.ResetGame();
+            }
+
+            SceneLoader sceneLoader = FindObjectOfType<SceneLoader>(); // accessing the current instance directly
+            if (sceneLoader != null)
+            {
+                sceneLoader.LoadGameOverScene();
+            }
+            else
+            {
+                Debug.LogError("SceneLoader instance was not found.");
+            }
         }
     }
 }
-

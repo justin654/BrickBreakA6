@@ -1,36 +1,56 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class GameSession : MonoBehaviour
 {
+    private static GameSession instance;
+    private SceneLoader sceneLoader;
+
+
     [SerializeField] private float initialGameSpeed = 1f;
     [SerializeField] private float gameSpeed;
+    [SerializeField] private string currentSceneName;
 
     [SerializeField] public int score = 0;
     [SerializeField] int breakableBlocks;
 
-    private SceneLoader sceneLoader;
-
     private void Awake()
     {
-        Debug.Log("In Awake() on " + transform.name);
-        if ((FindObjectsOfType<GameSession>().Length) > 1)
+        SetupSingleton();
+    }
+
+    void Start()
+    {
+        sceneLoader = FindObjectOfType<SceneLoader>();
+        Time.timeScale = initialGameSpeed;
+        gameSpeed = initialGameSpeed;
+        currentSceneName = SceneManager.GetActiveScene().name;
+    }
+
+    private void SetupSingleton()
+    {
+        if (instance == null)
         {
-            Debug.Log(transform.name + " is a dulpcate instance of GameSession, going away");
-            gameObject.SetActive(false);
-            Destroy(gameObject);
+            instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
-            Debug.Log(transform.name + " has the Singleton for GameSession");
-            DontDestroyOnLoad(gameObject);
+            Destroy(gameObject);
+            return;
         }
+
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
-    void Start()
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Time.timeScale = initialGameSpeed;
-        gameSpeed = initialGameSpeed;
+        currentSceneName = scene.name;
+        breakableBlocks = 0;
+
+        Debug.Log("Scene loaded: " + scene.name + ", reset breakableBlocks to 0.");
     }
 
     // Method for changing game speeds
@@ -52,33 +72,38 @@ public class GameSession : MonoBehaviour
 
     public void ResetGame()
     {
-        Destroy(gameObject);
+        score = 0;
+        breakableBlocks = 0;
     }
-    public void CountBlocks()
+
+    public void RegisterBlock()
     {
         breakableBlocks++;
+        Debug.Log("CountBlocks called by " + gameObject.name + ". Current count: " + breakableBlocks);
+
     }
 
     public void BlockDestroyed(int points)
     {
         breakableBlocks--;
         AddToScore(points);
-
         if (breakableBlocks <= 0)
         {
-            LoadNextLevel();
+            LoadNextLevel ();
         }
     }
 
     private void LoadNextLevel()
     {
-        Debug.Log("Load next scene");
+        if (currentSceneName == "Level01")
+        {
+            sceneLoader.LoadLevel2();
+        }
+
     }
 
-
-
-
-
-
-
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
 }

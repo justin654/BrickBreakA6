@@ -12,6 +12,12 @@ public class Ball : MonoBehaviour
     public AudioClip wallHitSound;
     public AudioClip paddleHitSound;
     private AudioSource audioSource;
+    private int timesHit;
+
+    [Header("Block Properties")]
+    [SerializeField] private int blockHitsToDestroy = 1; // by default, a block is destroyed by one hit
+    [SerializeField] private bool unbreakable = false;
+
 
     private Rigidbody2D ballRB;
 
@@ -20,6 +26,7 @@ public class Ball : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        timesHit = 0;
         audioSource = GetComponent<AudioSource>();
         ballRB = GetComponent<Rigidbody2D>();
 
@@ -44,6 +51,8 @@ public class Ball : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        if (!isStarted) return; //We dont want the collision sound playing while ball is frozen to paddle
+
         string tag = collision.gameObject.tag;
         audioSource.pitch = Random.Range(0.95f, 1.05f);
         // I found out we can use Switch statement instead of a bunch of Ifs. lets give it a shot

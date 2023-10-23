@@ -13,15 +13,14 @@ public class Block : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+
         gameSession = FindObjectOfType<GameSession>();
-        gameSession.CountBlocks();
+        if (gameSession != null)
+        {
+            gameSession.RegisterBlock();
+        }
     }
 
-    // Update is called once per framee
-    void Update()
-    {
-        
-    }
     void OnCollisionEnter2D(Collision2D collision)
     {
         audioSource.PlayOneShot(hitSound);
@@ -30,10 +29,11 @@ public class Block : MonoBehaviour
         GetComponent<Renderer>().enabled = false;
         GetComponent<Collider2D>().enabled = false;
 
-        gameSession.BlockDestroyed(points);
+        if (gameSession != null)
+        {
+            gameSession.BlockDestroyed(points);
+        }
 
         Destroy(gameObject, hitSound.length);
     }
-
-
 }
