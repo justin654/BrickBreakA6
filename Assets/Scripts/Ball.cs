@@ -13,10 +13,6 @@ public class Ball : MonoBehaviour
     public AudioClip paddleHitSound;
     private AudioSource audioSource;
 
-
-
-
-
     private Rigidbody2D ballRB;
 
 
@@ -92,7 +88,5 @@ public class Ball : MonoBehaviour
         Vector2 paddlePos = new Vector2(paddle.transform.position.x, paddle.transform.position.y);
         transform.position = paddlePos + ballPaddleDelta;
     }
-
-
 
 }
