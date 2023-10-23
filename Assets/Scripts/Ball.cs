@@ -49,6 +49,7 @@ public class Ball : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         string tag = collision.gameObject.tag;
+        audioSource.pitch = Random.Range(0.95f, 1.05f);
         // I found out we can use Switch statement instead of a bunch of Ifs. lets give it a shot
         switch (tag)
         {
@@ -56,6 +57,7 @@ public class Ball : MonoBehaviour
                 audioSource.PlayOneShot(blockHitSound);
                 break;
             case "Wall":
+                audioSource.pitch = Random.Range(0.8f, 1.2f);
                 audioSource.PlayOneShot(wallHitSound);
                 break;
             case "Paddle":
@@ -90,7 +92,6 @@ public class Ball : MonoBehaviour
         Vector2 paddlePos = new Vector2(paddle.transform.position.x, paddle.transform.position.y);
         transform.position = paddlePos + ballPaddleDelta;
     }
-
 
 
 
