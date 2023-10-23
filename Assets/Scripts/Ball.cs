@@ -62,6 +62,8 @@ public class Ball : MonoBehaviour
                 audioSource.PlayOneShot(paddleHitSound);
                 break;
             default:
+                //if no tag, just play a default block hit sound
+                audioSource.PlayOneShot(blockHitSound);
                 break;
         }
     }
