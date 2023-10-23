@@ -74,6 +74,7 @@ public class Block : MonoBehaviour
             audioSource.PlayOneShot(hitSound);
         }
     }
+
     public int GetHitsRemaining()
     {
         return hitsRemaining;
@@ -91,7 +92,9 @@ public class Block : MonoBehaviour
         {
             gameSession.BlockDestroyed(points);
         }
-        Explode();
+        if (explodeOnDestroy == true){
+            Explode();
+        }
         Destroy(gameObject, hitSound.length);
 
     }
