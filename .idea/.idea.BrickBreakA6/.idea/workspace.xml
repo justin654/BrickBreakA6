@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="912f40dd-3260-40c0-b780-a576354facf8" name="Changes" comment="" />
+    <list default="true" id="912f40dd-3260-40c0-b780-a576354facf8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BrickBreakA6/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BrickBreakA6/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,7 +77,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698042843139</updated>
-      <workItem from="1698042846767" duration="70000" />
+      <workItem from="1698042846767" duration="400000" />
     </task>
     <servers />
   </component>
