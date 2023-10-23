@@ -594,6 +594,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6200000, guid: 6fa70f3ff1e963b458ac74dc081c0201, type: 2}
     - target: {fileID: 4342091553888891923, guid: 4c7bd27641382644cb66549ff60cf8f2, type: 3}
+      propertyPath: blockHitSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 577edcd8f51b40541b2d2a22e2ba5100, type: 3}
+    - target: {fileID: 4342091553888891923, guid: 4c7bd27641382644cb66549ff60cf8f2, type: 3}
       propertyPath: InitialBallVelocity
       value: 15
       objectReference: {fileID: 0}

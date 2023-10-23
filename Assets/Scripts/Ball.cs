@@ -8,9 +8,11 @@ public class Ball : MonoBehaviour
     public bool isStarted = false;
     private GameObject paddle;
     private Vector2 ballPaddleDelta;
+    public AudioClip blockHitSound;
     public AudioClip wallHitSound;
     public AudioClip paddleHitSound;
     private AudioSource audioSource;
+
 
 
 
@@ -46,15 +48,24 @@ public class Ball : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Paddle")
+        string tag = collision.gameObject.tag;
+        // I found out we can use Switch statement instead of a bunch of Ifs. lets give it a shot
+        switch (tag)
         {
-            audioSource.PlayOneShot(paddleHitSound);
-        }
-        else if (collision.gameObject.tag == "Wall")
-        {
-            audioSource.PlayOneShot(wallHitSound);
+            case "Block":
+                audioSource.PlayOneShot(blockHitSound);
+                break;
+            case "Wall":
+                audioSource.PlayOneShot(wallHitSound);
+                break;
+            case "Paddle":
+                audioSource.PlayOneShot(paddleHitSound);
+                break;
+            default:
+                break;
         }
     }
+
 
 
     void LaunchBall()
