@@ -10,6 +10,7 @@ public class SceneLoader : MonoBehaviour
 
     private void Awake()
     {
+        DontDestroyOnLoad(gameObject);
         audioSource = GetComponent<AudioSource>();
     }
 
