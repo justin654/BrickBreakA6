@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block
       objectReference: {fileID: 0}
+    - target: {fileID: 1810473586791296451, guid: 7754f7260c05e96449630be96c400e95, type: 3}
+      propertyPath: m_TagString
+      value: Block
+      objectReference: {fileID: 0}
     - target: {fileID: 3790811117883829903, guid: 7754f7260c05e96449630be96c400e95, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.996909
