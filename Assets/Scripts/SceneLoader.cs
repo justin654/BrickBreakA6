@@ -5,6 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    public AudioClip gameOverSound;
+    private AudioSource audioSource;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     public void LoadGameScene()
     {
         SceneManager.LoadScene("Level01");
@@ -21,11 +29,19 @@ public class SceneLoader : MonoBehaviour
     }
     public void LoadGameOverScene()
     {
-        SceneManager.LoadScene("GameOver");
+        StartCoroutine(PlaySoundThenLoadScene(gameOverSound, "GameOver"));
     }
 
     public void QuitGame()
     {
         Application.Quit();
     }
+
+    private IEnumerator PlaySoundThenLoadScene(AudioClip sound, string sceneName)
+    {
+        audioSource.PlayOneShot(sound);
+        yield return new WaitForSeconds(sound.length);
+        SceneManager.LoadScene(sceneName);
+    }
+
 }
