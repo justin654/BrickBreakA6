@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class GameSession : MonoBehaviour
 {
-    private static GameSession instance;
+    private static GameSession _instance;
     private SceneLoader sceneLoader;
 
 
@@ -14,7 +14,7 @@ public class GameSession : MonoBehaviour
     [SerializeField] private string currentSceneName;
 
     [SerializeField] public int score = 0;
-    [SerializeField] int breakableBlocks;
+    [SerializeField] private int breakableBlocks;
 
     private void Awake()
     {
@@ -31,9 +31,9 @@ public class GameSession : MonoBehaviour
 
     private void SetupSingleton()
     {
-        if (instance == null)
+        if (_instance == null)
         {
-            instance = this;
+            _instance = this;
             DontDestroyOnLoad(gameObject);
         }
         else
@@ -78,12 +78,9 @@ public class GameSession : MonoBehaviour
 
     public void RegisterBlock(bool isBreakable)
     {
-        // Only increment the count for breakable blocks
-        if (isBreakable)
-        {
-            breakableBlocks++;
-            Debug.Log("RegisterBlock called. Current breakable blocks: " + breakableBlocks);
-        }
+        if (!isBreakable) return;
+        breakableBlocks++;
+        Debug.Log("RegisterBlock called. Current breakable blocks: " + breakableBlocks);
     }
 
 
