@@ -20,6 +20,10 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadStartScene()
     {
+        if (gameSession != null)
+        {
+            gameSession.ResetGame(); // We reset here as well for safe keeping
+        }
         SceneManager.LoadScene("StartMenu");
     }
 

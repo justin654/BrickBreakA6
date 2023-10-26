@@ -77,6 +77,9 @@ public class GameSession : MonoBehaviour
         // When we retry/replay, ensure we are resetting things so it doesn't keep carrying the values
         score = 0;
         breakableBlocks = 0;
+        Time.timeScale = initialGameSpeed;
+        gameSpeed = initialGameSpeed;
+        Debug.Log("Game has been reset.");
     }
 
     public void RegisterBlock(bool isBreakable)
