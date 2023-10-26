@@ -90,7 +90,7 @@ public class Ball : MonoBehaviour
     private void PaddleLocked()
     {
         var position = paddle.transform.position;
-        Vector2 paddlePos = new Vector2(position.x, position.y);
+        var paddlePos = new Vector2(position.x, position.y);
         transform.position = paddlePos + ballPaddleDelta;
     }
 

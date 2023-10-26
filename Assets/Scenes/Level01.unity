@@ -822,6 +822,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4091758886401415211, guid: 955e2f4c7a7fc6349a15c73861eb2176, type: 3}
+      propertyPath: gameOverSound
+      value: 
+      objectReference: {fileID: 8300000, guid: ab4f23f4227452342966ab664aa88ae0, type: 3}
     - target: {fileID: 4728398064046834521, guid: 955e2f4c7a7fc6349a15c73861eb2176, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1304.4001
