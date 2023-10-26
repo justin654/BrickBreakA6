@@ -28,7 +28,7 @@ public class GameSession : MonoBehaviour
         gameSpeed = initialGameSpeed;
 
         sceneLoader = FindObjectOfType<SceneLoader>();
-        currentSceneName = SceneManager.GetActiveScene().name;
+        currentSceneName = SceneManager.GetActiveScene().name; // Store current scene we are in
     }
 
     private void SetupSingleton()
@@ -43,12 +43,14 @@ public class GameSession : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-
+        //Subscribe to sceneLoaded event so we can reset the breakableBlocks to 0 when new scene happens. This is to fix
+        //the bug where the breakableBlocks were compounding when a new level was loaded.
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        // When a new scene loads, we update the currentSceneName(So we know where we are, and what level is next) and reset breakableBlocks to 0.
         currentSceneName = scene.name;
         breakableBlocks = 0;
 
@@ -59,7 +61,7 @@ public class GameSession : MonoBehaviour
     public void SetGameSpeed(float gameSpeed)
     {
         Time.timeScale = gameSpeed; // update Unity speed
-        this.gameSpeed = gameSpeed; //Reflect in inspector for debug
+        this.gameSpeed = gameSpeed; //Reflect in inspector for debug - Rider says this is shawdowing
     }
 
     public void AddToScore(int pointsToAdd)
@@ -74,12 +76,14 @@ public class GameSession : MonoBehaviour
 
     public void ResetGame()
     {
+        // When we retry/replay, ensure we are resetting things so it doesn't keep carrying the values
         score = 0;
         breakableBlocks = 0;
     }
 
     public void RegisterBlock(bool isBreakable)
     {
+        // We use this method to count ONLY the breakable blocks in the current level. 
         if (!isBreakable) return;
         breakableBlocks++;
         Debug.Log("RegisterBlock called. Current breakable blocks: " + breakableBlocks);
@@ -87,6 +91,7 @@ public class GameSession : MonoBehaviour
 
     public void BlockDestroyed(int points)
     {
+        // When block is destroyed, decrement the breakableBlocks, add points to our score, and if 0 or less left, lefts go to next level
         breakableBlocks--;
         AddToScore(points);
         if (breakableBlocks <= 0)
@@ -97,7 +102,7 @@ public class GameSession : MonoBehaviour
 
     private void LoadNextLevel()
     {
-        if (currentSceneName == "Level01")
+        if (currentSceneName == "Level01") // Doing it this way as the professor a while back mentioned something about not using buildIndex.
         {
             sceneLoader.LoadLevel2();
         }
@@ -106,6 +111,7 @@ public class GameSession : MonoBehaviour
 
     private void OnDestroy()
     {
+        // When block gets destroyed unsubscribe to the sceneLoaded event
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 }

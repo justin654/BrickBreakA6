@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    public float InitialBallVelocity = 20.0f;
+    public float initialBallVelocity = 20.0f;
     public bool isStarted = false;
     private GameObject paddle;
     private Vector2 ballPaddleDelta;
@@ -16,7 +16,7 @@ public class Ball : MonoBehaviour
     private Rigidbody2D ballRB;
 
     [Header("Ball Debug")]
-    [SerializeField] private float currentBallVelocity;
+    [SerializeField] private float currentBallVelocity; // BUG Ball ends up losing some velocity when it hits something odd, trying to see how slow it ends up 
 
     // Start is called before the first frame update
     void Start()
@@ -74,7 +74,7 @@ public class Ball : MonoBehaviour
 
     void LaunchBall()
     {
-        ballRB.velocity = new Vector2(0, InitialBallVelocity);
+        ballRB.velocity = new Vector2(0, initialBallVelocity);
         Debug.Log("LaunchBall called");
     }
 
@@ -89,7 +89,8 @@ public class Ball : MonoBehaviour
 
     private void PaddleLocked()
     {
-        Vector2 paddlePos = new Vector2(paddle.transform.position.x, paddle.transform.position.y);
+        var position = paddle.transform.position;
+        Vector2 paddlePos = new Vector2(position.x, position.y);
         transform.position = paddlePos + ballPaddleDelta;
     }
 
