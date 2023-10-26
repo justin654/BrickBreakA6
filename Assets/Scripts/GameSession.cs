@@ -103,6 +103,7 @@ public class GameSession : MonoBehaviour
         if (currentSceneName == "Level01") // Doing it this way as the professor a while back mentioned something about not using buildIndex.
         {
             sceneLoader.LoadLevel2();
+            SetGameSpeed(1.2f);
         }
         else if (currentSceneName == "Level02")
         {
