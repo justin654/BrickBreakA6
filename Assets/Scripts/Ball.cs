@@ -67,8 +67,6 @@ public class Ball : MonoBehaviour
                 audioSource.PlayOneShot(blockHitSound);
                 break;
         }
-        
-        TweakBallVelocity();
     }
 
     void LaunchBall()
@@ -93,24 +91,4 @@ public class Ball : MonoBehaviour
         transform.position = paddlePos + ballPaddleDelta;
     }
     
-    private void TweakBallVelocity()
-    {
-        if (!isStarted) return;
-        float randomFactor = 0.2f;
-
-        Vector2 velocityTweak = new Vector2( // We need to make slight change because i'm sick of getting stuck in a corner bouncing forever
-            Random.Range(-randomFactor, randomFactor), 
-            Random.Range(-randomFactor, randomFactor)
-        );
-
-        // Apply the change
-        var velocity = ballRB.velocity;
-        velocity += velocityTweak;
-
-        // Gotta change it while maintaining the same speed
-        velocity = velocity.normalized * initialBallVelocity;
-        ballRB.velocity = velocity;
-    }
-
-
 }

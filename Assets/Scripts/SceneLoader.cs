@@ -6,6 +6,7 @@ public class SceneLoader : MonoBehaviour
 {
     public AudioClip gameOverSound;
     private AudioSource audioSource;
+    private GameSession gameSession;
 
     private void Awake()
     {

@@ -12,6 +12,7 @@ public class WinScreenScoreDisplay : MonoBehaviour
         {
             TextMeshProUGUI finalScoreText = GetComponent<TextMeshProUGUI>();
             finalScoreText.text = "Final Score: " + gameSession.GetScore().ToString();
+            gameSession.ResetGame(); // Display the final score, then reset it for if we decide to play again.
         }
         else
         {
