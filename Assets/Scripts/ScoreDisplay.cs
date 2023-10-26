@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
@@ -16,6 +14,6 @@ public class ScoreDisplay : MonoBehaviour
 
     void Update()
     {
-        scoreText.text = gameSession.GetScore().ToString();
+        scoreText.text = "Score: " + gameSession.GetScore().ToString();
     }
 }

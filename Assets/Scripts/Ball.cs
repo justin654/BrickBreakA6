@@ -1,13 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
     public float initialBallVelocity = 20.0f;
-    public bool isStarted = false;
+    public bool isStarted;
     private GameObject paddle;
     private Vector2 ballPaddleDelta;
+    
     public AudioClip blockHitSound;
     public AudioClip wallHitSound;
     public AudioClip paddleHitSound;
@@ -68,9 +67,9 @@ public class Ball : MonoBehaviour
                 audioSource.PlayOneShot(blockHitSound);
                 break;
         }
+        
+        TweakBallVelocity();
     }
-
-
 
     void LaunchBall()
     {
@@ -93,5 +92,25 @@ public class Ball : MonoBehaviour
         var paddlePos = new Vector2(position.x, position.y);
         transform.position = paddlePos + ballPaddleDelta;
     }
+    
+    private void TweakBallVelocity()
+    {
+        if (!isStarted) return;
+        float randomFactor = 0.2f;
+
+        Vector2 velocityTweak = new Vector2( // We need to make slight change because i'm sick of getting stuck in a corner bouncing forever
+            Random.Range(-randomFactor, randomFactor), 
+            Random.Range(-randomFactor, randomFactor)
+        );
+
+        // Apply the change
+        var velocity = ballRB.velocity;
+        velocity += velocityTweak;
+
+        // Gotta change it while maintaining the same speed
+        velocity = velocity.normalized * initialBallVelocity;
+        ballRB.velocity = velocity;
+    }
+
 
 }

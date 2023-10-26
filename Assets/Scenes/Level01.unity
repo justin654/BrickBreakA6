@@ -711,6 +711,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Play Space
       objectReference: {fileID: 0}
+    - target: {fileID: 1749288879511241406, guid: fa4bc6a1ef881ad41825b24edf0993a9, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749288879511241406, guid: fa4bc6a1ef881ad41825b24edf0993a9, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749288879511241406, guid: fa4bc6a1ef881ad41825b24edf0993a9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3d6fa393a813def4baabdbbeb7b7b76e, type: 3}
+    - target: {fileID: 1749288879511241406, guid: fa4bc6a1ef881ad41825b24edf0993a9, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3447670715848202033, guid: fa4bc6a1ef881ad41825b24edf0993a9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
