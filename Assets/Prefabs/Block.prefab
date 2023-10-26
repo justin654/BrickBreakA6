@@ -150,7 +150,7 @@ MonoBehaviour:
   hitsRemaining: 0
   unbreakable: 0
   breakableColor: {r: 1, g: 1, b: 1, a: 1}
-  unbreakableColor: {r: 1, g: 0, b: 0, a: 1}
+  unbreakableColor: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 1}
   explodeOnDestroy: 1
   fragmentPrefab: {fileID: 8173759559505702851, guid: 6effd4ceadbb64b43bc50fdacc6cf742, type: 3}
   numberOfFragments: 5
