@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CollisionDebug : MonoBehaviour
 {
+    [Header("Debug Properties")]
     [SerializeField] private bool logCollisionEnter = false;
     [SerializeField] private bool logCollisionEnterDetails = false;
     [SerializeField] private bool logCollisionExit = false;

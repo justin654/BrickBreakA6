@@ -22,7 +22,7 @@ public class Floor : MonoBehaviour
                 gameSession.ResetGame();
             }
 
-            SceneLoader sceneLoader = FindObjectOfType<SceneLoader>(); // accessing the current instance directly
+            SceneLoader sceneLoader = FindObjectOfType<SceneLoader>();
             if (sceneLoader != null)
             {
                 sceneLoader.LoadGameOverScene();

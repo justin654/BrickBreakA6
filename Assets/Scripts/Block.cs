@@ -4,33 +4,28 @@ using UnityEngine;
 
 public class Block : MonoBehaviour
 {
+    private int points = 100;
+    private int timesHit;
+
+    private SpriteRenderer spriteRenderer;
+    private GameSession gameSession;
     private AudioSource audioSource;
     public AudioClip hitSound;
-    public int points = 100;
-    private GameSession gameSession;
-    private int timesHit;
-    private SpriteRenderer spriteRenderer;
+
 
 
     [Header("Block Properties")]
     [SerializeField] private int blockHitsToDestroy = 1;
     [SerializeField] private int hitsRemaining;
-
     [SerializeField] private bool unbreakable = false;
-
-    [Header("Color Properties")]
     [SerializeField] private Color breakableColor = Color.white;
     [SerializeField] private Color unbreakableColor = Color.red;
 
-    [Header("Explode Properties")]
+    [Header("Explode Settings")]
     public bool explodeOnDestroy;
     public GameObject fragmentPrefab;
     public int numberOfFragments = 5;
     public float delayTime = 0.1f;
-
-
-
-
 
     // Start is called before the first frame update
     void Start()
@@ -46,6 +41,7 @@ public class Block : MonoBehaviour
 
         if (unbreakable)
         {
+            // I need to change this to update the sprite, not just color
             spriteRenderer.color = unbreakableColor;
         }
         else
@@ -84,7 +80,6 @@ public class Block : MonoBehaviour
     {
         audioSource.PlayOneShot(hitSound);
 
-
         GetComponent<Renderer>().enabled = false;
         GetComponent<Collider2D>().enabled = false;
 
@@ -92,7 +87,9 @@ public class Block : MonoBehaviour
         {
             gameSession.BlockDestroyed(points);
         }
-        if (explodeOnDestroy == true){
+
+        if (explodeOnDestroy == true)
+        {
             Explode();
         }
         Destroy(gameObject, hitSound.length);
@@ -103,14 +100,17 @@ public class Block : MonoBehaviour
     {
         for (int i = 0; i < numberOfFragments; i++)
         {
-            GameObject fragment = Instantiate(fragmentPrefab, transform.position, Quaternion.Euler(0f, 0f, Random.Range(0f, 360f)));
+            GameObject fragment = Instantiate(fragmentPrefab, transform.position, Quaternion.identity);
+
+            float randomX = Random.Range(-3, 3);
+            float randomY = Random.Range(-3, 3);
 
             Rigidbody2D rb = fragment.GetComponent<Rigidbody2D>();
             if (rb != null)
             {
-                Vector2 randomForce = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized * Random.Range(2f, 5f);
-                rb.AddForce(randomForce, ForceMode2D.Impulse);
+                rb.velocity = new Vector2(randomX, randomY);
             }
+
             Destroy(fragment, delayTime);
         }
     }

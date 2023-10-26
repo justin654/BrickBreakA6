@@ -27,6 +27,7 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene("Win");
     }
+
     public void LoadGameOverScene()
     {
         StartCoroutine(PlaySoundThenLoadScene(gameOverSound, "GameOver"));

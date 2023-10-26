@@ -8,12 +8,13 @@ public class GameSession : MonoBehaviour
     private static GameSession _instance;
     private SceneLoader sceneLoader;
 
-
+    [Header("Game Properties")]
     [SerializeField] private float initialGameSpeed = 1f;
     [SerializeField] private float gameSpeed;
-    [SerializeField] private string currentSceneName;
-
     [SerializeField] public int score = 0;
+
+    [Header("Level Properties")]
+    [SerializeField] private string currentSceneName;
     [SerializeField] private int breakableBlocks;
 
     private void Awake()
@@ -23,9 +24,10 @@ public class GameSession : MonoBehaviour
 
     void Start()
     {
-        sceneLoader = FindObjectOfType<SceneLoader>();
         Time.timeScale = initialGameSpeed;
         gameSpeed = initialGameSpeed;
+
+        sceneLoader = FindObjectOfType<SceneLoader>();
         currentSceneName = SceneManager.GetActiveScene().name;
     }
 
@@ -83,14 +85,13 @@ public class GameSession : MonoBehaviour
         Debug.Log("RegisterBlock called. Current breakable blocks: " + breakableBlocks);
     }
 
-
     public void BlockDestroyed(int points)
     {
         breakableBlocks--;
         AddToScore(points);
         if (breakableBlocks <= 0)
         {
-            LoadNextLevel ();
+            LoadNextLevel();
         }
     }
 

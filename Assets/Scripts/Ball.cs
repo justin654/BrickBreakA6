@@ -15,7 +15,8 @@ public class Ball : MonoBehaviour
 
     private Rigidbody2D ballRB;
 
-
+    [Header("Ball Debug")]
+    [SerializeField] private float currentBallVelocity;
 
     // Start is called before the first frame update
     void Start()
@@ -24,9 +25,9 @@ public class Ball : MonoBehaviour
         ballRB = GetComponent<Rigidbody2D>();
 
         Paddle paddleComponent = FindObjectOfType<Paddle>();
-        if (paddleComponent != null) 
+        if (paddleComponent != null)
         {
-            paddle = paddleComponent.gameObject; 
+            paddle = paddleComponent.gameObject;
         }
 
         ballPaddleDelta = transform.position - paddle.transform.position;
@@ -40,6 +41,7 @@ public class Ball : MonoBehaviour
             PaddleLocked();
             CheckForStart();
         }
+        currentBallVelocity = ballRB.velocity.magnitude;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
