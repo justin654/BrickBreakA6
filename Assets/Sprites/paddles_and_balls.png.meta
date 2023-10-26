@@ -1,0 +1,579 @@
+fileFormatVersion: 2
+guid: 903403553ff8c7f43a7d392785091bd1
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 0
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: paddles_and_balls_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 80
+        width: 32
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -10.577332, y: 4.5}
+        - {x: -16, y: 3.5956726}
+        - {x: -16, y: -4.5}
+        - {x: 16, y: -4.5}
+        - {x: 16, y: 3.530548}
+        - {x: 10.85685, y: 4.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcab213da9a2ffa41a9bd2681ff5388a
+      internalID: 587489423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paddles_and_balls_10
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 80
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4a68f9a9551787418ff8e9589d8dcdd
+      internalID: -787482843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paddles_and_balls_21
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 64
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c32114df0d2ad6a4d8765759fb48d21d
+      internalID: 1409929746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paddles_and_balls_31
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 48
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f53355ec214a26a45bfc9db827bdc4ee
+      internalID: 774688874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellowball_big
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 48
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d31662e5308fd254c87d835469b971f8
+      internalID: -882335664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paddles_and_balls_43
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 32
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85dacd59d1148b54bac7a38c80e0d1a5
+      internalID: -2002955894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline:
+    - - {x: -96, y: -37}
+      - {x: -96, y: -48}
+      - {x: 0, y: -48}
+      - {x: 2, y: -46}
+      - {x: 2, y: -40}
+      - {x: 0, y: -37}
+    - - {x: 17, y: -41}
+      - {x: 14, y: -44}
+      - {x: 14, y: -47}
+      - {x: 15, y: -48}
+      - {x: 22, y: -48}
+      - {x: 23, y: -47}
+      - {x: 23, y: -44}
+      - {x: 20, y: -41}
+    - - {x: 34, y: -39}
+      - {x: 30, y: -41}
+      - {x: 30, y: -47}
+      - {x: 31, y: -48}
+      - {x: 41, y: -48}
+      - {x: 41, y: -42}
+      - {x: 39, y: -39}
+    - - {x: 50, y: -38}
+      - {x: 46, y: -40}
+      - {x: 46, y: -47}
+      - {x: 47, y: -48}
+      - {x: 57, y: -48}
+      - {x: 58, y: -46}
+      - {x: 58, y: -40}
+      - {x: 54, y: -38}
+    - - {x: 64, y: -35}
+      - {x: 62, y: -39}
+      - {x: 62, y: -48}
+      - {x: 77, y: -48}
+      - {x: 77, y: -40}
+      - {x: 75, y: -35}
+    - - {x: 84, y: 48}
+      - {x: 78, y: 46}
+      - {x: 78, y: -44}
+      - {x: 80, y: -48}
+      - {x: 96, y: -48}
+      - {x: 96, y: 43}
+      - {x: 93, y: 48}
+    - - {x: -96, y: -21}
+      - {x: -96, y: -34}
+      - {x: 1, y: -34}
+      - {x: 2, y: -32}
+      - {x: 2, y: -21}
+    - - {x: 17, y: -25}
+      - {x: 14, y: -28}
+      - {x: 14, y: -31}
+      - {x: 17, y: -34}
+      - {x: 20, y: -34}
+      - {x: 23, y: -31}
+      - {x: 23, y: -28}
+      - {x: 20, y: -25}
+    - - {x: 32, y: -23}
+      - {x: 30, y: -24}
+      - {x: 30, y: -30}
+      - {x: 32, y: -34}
+      - {x: 37, y: -34}
+      - {x: 41, y: -32}
+      - {x: 41, y: -26}
+      - {x: 40, y: -23}
+    - - {x: 50, y: -22}
+      - {x: 46, y: -24}
+      - {x: 46, y: -30}
+      - {x: 50, y: -34}
+      - {x: 54, y: -34}
+      - {x: 58, y: -32}
+      - {x: 58, y: -24}
+      - {x: 57, y: -22}
+    - - {x: 67, y: -19}
+      - {x: 62, y: -24}
+      - {x: 62, y: -29}
+      - {x: 67, y: -34}
+      - {x: 72, y: -34}
+      - {x: 77, y: -29}
+      - {x: 77, y: -24}
+      - {x: 72, y: -19}
+    - - {x: -96, y: -5}
+      - {x: -96, y: -18}
+      - {x: -2, y: -18}
+      - {x: 2, y: -17}
+      - {x: 2, y: -7}
+      - {x: 1, y: -5}
+    - - {x: 17, y: -9}
+      - {x: 14, y: -12}
+      - {x: 14, y: -15}
+      - {x: 17, y: -18}
+      - {x: 20, y: -18}
+      - {x: 23, y: -15}
+      - {x: 23, y: -12}
+      - {x: 20, y: -9}
+    - - {x: 32, y: -7}
+      - {x: 30, y: -10}
+      - {x: 30, y: -17}
+      - {x: 32, y: -18}
+      - {x: 40, y: -18}
+      - {x: 41, y: -16}
+      - {x: 41, y: -9}
+      - {x: 37, y: -7}
+    - - {x: 50, y: -6}
+      - {x: 46, y: -10}
+      - {x: 46, y: -16}
+      - {x: 50, y: -18}
+      - {x: 57, y: -18}
+      - {x: 58, y: -16}
+      - {x: 58, y: -8}
+      - {x: 54, y: -6}
+    - - {x: 64, y: -3}
+      - {x: 62, y: -8}
+      - {x: 62, y: -16}
+      - {x: 67, y: -18}
+      - {x: 72, y: -18}
+      - {x: 77, y: -13}
+      - {x: 77, y: -8}
+      - {x: 72, y: -3}
+    - - {x: -96, y: 11}
+      - {x: -96, y: -2}
+      - {x: 2, y: -2}
+      - {x: 2, y: 11}
+    - - {x: 17, y: 7}
+      - {x: 14, y: 4}
+      - {x: 14, y: 1}
+      - {x: 17, y: -2}
+      - {x: 20, y: -2}
+      - {x: 23, y: 1}
+      - {x: 23, y: 4}
+      - {x: 20, y: 7}
+    - - {x: 32, y: 9}
+      - {x: 30, y: 6}
+      - {x: 30, y: -1}
+      - {x: 32, y: -2}
+      - {x: 40, y: -2}
+      - {x: 41, y: 0}
+      - {x: 41, y: 7}
+      - {x: 37, y: 9}
+    - - {x: 50, y: 10}
+      - {x: 46, y: 6}
+      - {x: 46, y: 0}
+      - {x: 50, y: -2}
+      - {x: 57, y: -2}
+      - {x: 58, y: 0}
+      - {x: 58, y: 8}
+      - {x: 54, y: 10}
+    - - {x: 64, y: 13}
+      - {x: 62, y: 8}
+      - {x: 62, y: 0}
+      - {x: 67, y: -2}
+      - {x: 75, y: -2}
+      - {x: 77, y: 3}
+      - {x: 77, y: 11}
+      - {x: 72, y: 13}
+    - - {x: -96, y: 27}
+      - {x: -96, y: 14}
+      - {x: 1, y: 14}
+      - {x: 2, y: 16}
+      - {x: 2, y: 27}
+    - - {x: 17, y: 23}
+      - {x: 14, y: 20}
+      - {x: 14, y: 17}
+      - {x: 17, y: 14}
+      - {x: 20, y: 14}
+      - {x: 23, y: 17}
+      - {x: 23, y: 20}
+      - {x: 20, y: 23}
+    - - {x: 32, y: 25}
+      - {x: 30, y: 24}
+      - {x: 30, y: 18}
+      - {x: 32, y: 14}
+      - {x: 37, y: 14}
+      - {x: 41, y: 16}
+      - {x: 41, y: 22}
+      - {x: 40, y: 25}
+    - - {x: 54, y: 26}
+      - {x: 47, y: 26}
+      - {x: 46, y: 24}
+      - {x: 46, y: 16}
+      - {x: 50, y: 14}
+      - {x: 54, y: 14}
+      - {x: 58, y: 18}
+      - {x: 58, y: 24}
+    - - {x: 67, y: 29}
+      - {x: 62, y: 28}
+      - {x: 62, y: 17}
+      - {x: 63, y: 14}
+      - {x: 75, y: 14}
+      - {x: 77, y: 19}
+      - {x: 77, y: 28}
+      - {x: 75, y: 29}
+    - - {x: -1, y: 43}
+      - {x: -96, y: 43}
+      - {x: -96, y: 30}
+      - {x: -1, y: 30}
+      - {x: 2, y: 34}
+      - {x: 1, y: 41}
+    - - {x: 17, y: 39}
+      - {x: 14, y: 36}
+      - {x: 14, y: 33}
+      - {x: 17, y: 30}
+      - {x: 20, y: 30}
+      - {x: 23, y: 33}
+      - {x: 23, y: 36}
+      - {x: 20, y: 39}
+    - - {x: 32, y: 41}
+      - {x: 30, y: 38}
+      - {x: 30, y: 31}
+      - {x: 32, y: 30}
+      - {x: 40, y: 30}
+      - {x: 41, y: 32}
+      - {x: 41, y: 39}
+      - {x: 37, y: 41}
+    - - {x: 48, y: 42}
+      - {x: 46, y: 38}
+      - {x: 46, y: 31}
+      - {x: 48, y: 30}
+      - {x: 57, y: 30}
+      - {x: 58, y: 32}
+      - {x: 58, y: 40}
+      - {x: 54, y: 42}
+    - - {x: 67, y: 45}
+      - {x: 62, y: 40}
+      - {x: 62, y: 35}
+      - {x: 67, y: 30}
+      - {x: 72, y: 30}
+      - {x: 77, y: 35}
+      - {x: 77, y: 40}
+      - {x: 72, y: 45}
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      paddles_and_balls_0: -45785801
+      paddles_and_balls_1: -2047020190
+      paddles_and_balls_10: -787482843
+      paddles_and_balls_11: 416940835
+      paddles_and_balls_12: -29975648
+      paddles_and_balls_13: -806210617
+      paddles_and_balls_14: -1043194891
+      paddles_and_balls_15: 628931802
+      paddles_and_balls_16: -347850532
+      paddles_and_balls_17: 1296434169
+      paddles_and_balls_18: -628893292
+      paddles_and_balls_19: -685908670
+      paddles_and_balls_2: 1685691591
+      paddles_and_balls_20: -2041053949
+      paddles_and_balls_21: 1409929746
+      paddles_and_balls_22: 1247040946
+      paddles_and_balls_23: -2034529730
+      paddles_and_balls_24: -56475650
+      paddles_and_balls_25: -1622708640
+      paddles_and_balls_26: 611198495
+      paddles_and_balls_27: 1755154699
+      paddles_and_balls_28: -1417776548
+      paddles_and_balls_29: -1665084869
+      paddles_and_balls_3: -362367440
+      paddles_and_balls_30: 433481059
+      paddles_and_balls_31: 774688874
+      paddles_and_balls_33: -1635505962
+      paddles_and_balls_34: -1764384630
+      paddles_and_balls_35: 542826212
+      paddles_and_balls_36: 1055411006
+      paddles_and_balls_37: 2039889694
+      paddles_and_balls_38: -1108224644
+      paddles_and_balls_39: -207119166
+      paddles_and_balls_4: 587489423
+      paddles_and_balls_40: -1837693560
+      paddles_and_balls_41: 1114378913
+      paddles_and_balls_42: 1059585152
+      paddles_and_balls_43: -2002955894
+      paddles_and_balls_44: -1509336788
+      paddles_and_balls_45: -232093362
+      paddles_and_balls_46: -1208728819
+      paddles_and_balls_47: 1435332573
+      paddles_and_balls_48: 2139317647
+      paddles_and_balls_49: -1915968045
+      paddles_and_balls_5: -2047751390
+      paddles_and_balls_50: -1081453277
+      paddles_and_balls_51: -459601981
+      paddles_and_balls_52: -189657941
+      paddles_and_balls_53: -934967012
+      paddles_and_balls_54: -695127466
+      paddles_and_balls_55: 1197499998
+      paddles_and_balls_56: -480482435
+      paddles_and_balls_57: 2053665314
+      paddles_and_balls_58: 1472003540
+      paddles_and_balls_59: 372365906
+      paddles_and_balls_6: 1904718709
+      paddles_and_balls_60: 359534191
+      paddles_and_balls_61: 896400172
+      paddles_and_balls_62: -975804722
+      paddles_and_balls_63: 1876948393
+      paddles_and_balls_64: 2100095973
+      paddles_and_balls_65: -1836870313
+      paddles_and_balls_7: -1353154740
+      paddles_and_balls_8: 58573265
+      paddles_and_balls_9: 1372327597
+      yellowball_big: -882335664
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
