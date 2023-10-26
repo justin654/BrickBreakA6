@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Block : MonoBehaviour
 {
-    private int points = 100;
     private int timesHit;
 
     private SpriteRenderer spriteRenderer;
@@ -15,6 +14,8 @@ public class Block : MonoBehaviour
 
 
     [Header("Block Properties")]
+    [SerializeField] private int points = 100;
+
     [SerializeField] private int blockHitsToDestroy = 1;
     [SerializeField] private int hitsRemaining;
     [SerializeField] private bool unbreakable = false;

@@ -106,6 +106,10 @@ public class GameSession : MonoBehaviour
         {
             sceneLoader.LoadLevel2();
         }
+        else if (currentSceneName == "Level02")
+        {
+            sceneLoader.LoadWinScene();
+        }
 
     }
 
